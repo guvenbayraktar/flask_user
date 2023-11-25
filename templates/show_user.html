@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kullanici Bilgileri</title>
+</head>
+<body>
+<h2>Kullanici Tablosu</h2>
+<table>
+    {% if users|length > 0 %}
+    <tr>
+        <th>username</th>
+        <th>name</th>
+        <th>surname</th>
+        <th>age</th>
+        <th>photo</th>
+    </tr>
+    {% endif %}
+    {% for user in users %}
+    <tr>
+        <td>{{ user.username }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.surname }}</td>
+        <td>{{ this_year - user.birth_year }}</td>
+        <td><img src="/{{ user.profile_picture }}" style="width:64px;"></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

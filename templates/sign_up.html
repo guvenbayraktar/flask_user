@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hesap Acma</title>
+</head>
+<body>
+<h2>Create Account</h2>
+<form action="/sign_up" method="post" enctype="multipart/form-data" style="line-height:30px">
+    <input type="text" id="n" name="name" required placeholder="adiniz"><br>
+    <input type="text" id="sn" name="surname" required placeholder="soyadiniz"><br>
+    <input type="date" id=by" name="birth_year" max="{{ max_year }}-01-01" min="{{ min_year }}-01-01" required placeholder="yasiniz"><br>
+    <input type="text" id="un" name="username" required placeholder="kullanici adiniz"><br>
+    <input type="password" id="p" name="password" required placeholder="sifreniz"><br>
+    <input type="file" id="pp" name="photo" accept="{{ image_extensions }}"><br>
+    <input type="submit" value="Kayit">
+</form>
+</body>
+</html>
